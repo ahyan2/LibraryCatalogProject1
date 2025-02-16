@@ -15,18 +15,43 @@ Using I/O manipulation to display catalog. Using overloaded methods to search fo
 #include <iomanip>  // for display manip
 #include <chrono>   // for time delay
 #include <thread>   // for time delay
+#include <cctype>   // for isalpha
 
 using namespace std;
 
+char validChoice(){
+    char choice;
+    while (true){
+        cout << "Type 'y' for Yes, or 'n' for No." << endl;
+        cin >> choice;
 
-string validString(){
+        choice = tolower(choice);
+        if(choice == 'y' || choice == 'n'){
+            break;
+        } else {
+            cout << "Invalid... Please type either y or n " << endl;
+        }
+    }
+    return choice;
+}
+
+string validFirstName(){
     string name;
-
     while (true) {
         getline(cin, name);
+        bool isValid = true;
 
-        if (name.empty()) {
-            cout << "Invalid... Please enter your first name" << endl;
+        if (!name.empty()) {    // if input is not empty, continue  with check
+            for (char c : name) {   // check if each character is in the alphabet (only letters)
+                if (!isalpha(static_cast<unsigned char>(c))) { // correct handling of char values
+                    isValid = false;    // if any char is not a letter, set bool false, invalid input
+                    break;
+                }
+            }
+        }
+
+        if (!isValid) {
+            cout << "Invalid... Please enter only your first name" << endl;
         } else {
             break;
         }
@@ -35,7 +60,7 @@ string validString(){
 }
 
 
-int validInt(){
+int validStudentID(){
     int num;
     while (true){
         cin >> num;
@@ -68,20 +93,35 @@ void displayWelcome(){
     cout << "Hello, welcome to the virtual library!" << endl;
     this_thread::sleep_for(chrono::seconds(2));
     
-    cout << "What is your first name?" << endl;
-    string name = validString();
-    
-    cout << "What is your 8-digit student ID?" << endl;
-    int studentID = validInt();
-    
-    cout << setw(40) << setfill('=') << " " << setfill(' ') << endl;
-    cout << "Please confirm if this is your first name and SID: " << name << ", " << studentID << endl;
+    while (true){
+        cout << "What is your first name?" << endl;
+        string name = validFirstName();
+        
+        cout << "What is your 8-digit student ID?" << endl;
+        this_thread::sleep_for(chrono::seconds(1));
+        cout << "*** NOTE: A valid student ID does not start with zero (0) ***" << endl;
+        int studentID = validStudentID();
+        
+        cout << setw(40) << setfill('=') << " " << setfill(' ') << endl;
+        cout << "Please confirm if this is your first name and SID: " << name << ", " << studentID << endl;
+        this_thread::sleep_for(chrono::seconds(1));
+        char choice = validChoice();
+        if (choice == 'y'){
+            break;
+        } else {
+            cout << "Got it, let's start over." << endl;
+            cout << setw(40) << setfill('=') << " " << setfill(' ') << endl;
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');    // clearing buffer for fresh inputs
+            this_thread::sleep_for(chrono::seconds(2));
+        }
+    }
 
 }
 
 
 int main() {
     displayWelcome();
+    cout << "Complete!" << endl;
 
     
     return 0;
