@@ -15,4 +15,10 @@ extern vector<string> title;
 extern vector<string> genre;
 
 
+extern vector<int> removedNumberID;
+extern vector<string> removedAuthor;
+extern vector<string> removedTitle;
+extern vector<string> removedGenre;
+
+
 #endif
