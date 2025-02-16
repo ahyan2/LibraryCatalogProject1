@@ -19,7 +19,7 @@ string validFirstName(){
             }
         }
 
-        if (!isValid) {
+        if (!isValid  || name.empty()) {    // invalid if not all letters or empty input
             cout << "Invalid... Please enter only your first name" << endl;
         } else {
             break;
