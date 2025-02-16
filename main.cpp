@@ -13,6 +13,7 @@ Using I/O manipulation to display catalog. Using overloaded methods to search fo
 
 #include "Utils/displayWelcome.hpp"     // contains validChoice, validFirstName, validStudentID
 #include "Utils/displayBooks.hpp"
+#include "globalVariables.hpp"
 
 #include <iostream> // for print
 #include <string>   // for strings
@@ -23,9 +24,41 @@ Using I/O manipulation to display catalog. Using overloaded methods to search fo
 
 using namespace std;
 
+
+
+void checkOut(){
+    cout << "Enter the 5-digit book ID:" << endl;
+    int arrIndex = -1;
+    while(true){
+        int bookID = validID(5);
+        if (bookID >= 11111 && bookID <= 11115){
+            arrIndex = (bookID % 10) - 1;
+            break;
+        } else {
+            cout << "Invalid, try again." << endl;
+        }
+    }
+    cout << "Is this the book you would like to checkout?" << endl;
+    cout << right << setw(5) << setfill('1') << numberID[arrIndex] << setfill(' ') << setw(10) << "" << left << setw(20) << author[arrIndex] << setw(20) << genre[arrIndex] << setw(20) << title[arrIndex] << endl;
+    
+}
+
+
+void userCatalogInteraction(){
+    this_thread::sleep_for(chrono::seconds(2));
+    cout << endl << "Would you like to checkout a book?" << endl;
+    char choice = validChoice();
+    if (choice == 'y'){
+        checkOut();
+    }
+//    cout << endl << "Would you like to donate a book?" << endl;   TODO: ADD IMPLEMENTATION
+}
+
+
 int main() {
 //    displayWelcome();
     displayBooks();
+    userCatalogInteraction();
 
     
     return 0;

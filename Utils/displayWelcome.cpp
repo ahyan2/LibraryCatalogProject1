@@ -1,6 +1,6 @@
 #include "validChoice.hpp"
 #include "validFirstName.hpp"
-#include "validStudentID.hpp"
+#include "validID.hpp"
 #include "globalVariables.hpp"  // for global variables: name and studentID
 
 #include <iostream> // for print
@@ -23,7 +23,7 @@ void displayWelcome(){
         cout << "What is your 8-digit student ID?" << endl;
         this_thread::sleep_for(chrono::seconds(1));
         cout << "*** NOTE: A valid student ID does not start with zero (0) ***" << endl;
-        studentID = validStudentID();
+        studentID = validID(8);
         
         cout << setw(40) << setfill('=') << " " << setfill(' ') << endl;
         cout << "Please confirm if this is your first name and SID: " << name << ", " << studentID << endl;
