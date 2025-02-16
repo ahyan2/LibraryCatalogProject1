@@ -10,6 +10,7 @@ char validChoice(){
 
         choice = tolower(choice);
         if(choice == 'y' || choice == 'n'){
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');    // remove input buffer if user types multiple characters
             break;
         } else {
             cout << "Invalid... Please type either y or n " << endl;
