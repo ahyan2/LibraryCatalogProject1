@@ -70,6 +70,7 @@ bool checkIn(){
             removedGenre.erase(removedGenre.begin());
             removedTitle.erase(removedTitle.begin());
             
+            displayBooks();     // will only display books again once user checks book back in via this function.
             return true;    // doesn't execute final code segment if book info already inserted (true value doesn't matter)
         }
     }
@@ -77,6 +78,8 @@ bool checkIn(){
     author.push_back(removedAuthor[0]);
     genre.push_back(removedGenre[0]);
     title.push_back(removedTitle[0]);
+    
+    displayBooks();
     return true;    // in case element removed was largest in original arrays. (true value doesn't matter)
 }
 
@@ -94,6 +97,7 @@ void awaitingCheckIn(){
         daysPassed++;
     }
     while(true){
+        this_thread::sleep_for(chrono::seconds(1));
         cout << "Hello " << name << " (SID " << studentID << "), your book is overdue! Please check it back in." << endl;
         cout << endl << "Would you like to check-in your book?" << endl;
         char choice = validChoice();
@@ -123,11 +127,21 @@ void userCatalogInteraction(){
         choice = validChoice();
         if (choice == 'y'){
             checkIn();
+            this_thread::sleep_for(chrono::seconds(1));
             cout << endl << "Thank you " << name << " for returning your book!" << endl << endl;
+            this_thread::sleep_for(chrono::seconds(1));
         } else{
             awaitingCheckIn();
         }
     }
+}
+
+void displayGoodbye(){
+    cout << setw(60) << setfill('*') << " " << setfill(' ') << endl;
+
+    cout << "Thank you " << name << " for visiting our virtual library, We hope to see you again soon!" << endl;
+    
+    cout << setw(60) << setfill('*') << " " << setfill(' ') << endl;
 }
 
 
@@ -135,10 +149,7 @@ int main() {
     displayWelcome();
     displayBooks();
     userCatalogInteraction();
-    displayBooks();
-//    displayGoodbye();  TODO: IMPLEMENT THIS
-    
-
+    displayGoodbye();
     
     return 0;
 }

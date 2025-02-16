@@ -2,6 +2,8 @@
 #include <string>   // for strings
 #include <iomanip>  // for display manip
 #include <vector>
+#include <chrono>   // for time delay
+#include <thread>   // for time delay
 
 
 #include "globalVariables.hpp"
@@ -11,6 +13,8 @@ using namespace std;
 
 void displayBooks(){
     cout << setw(40) << setfill('=') << " " << setfill(' ') << endl;
+    
+    this_thread::sleep_for(chrono::seconds(1));
     cout << "Hello " << name << ", here is our library catalog!" << endl << endl;
     
     cout << right << setw(47) << "* Current Books *" << endl;
