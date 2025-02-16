@@ -11,10 +11,7 @@ Using I/O manipulation to display catalog. Using overloaded methods to search fo
 //Ensure that system integrity is maintained by implementing rules such as one book per student, requiring checks for existing checkouts before allowing further transactions.
 
 
-#include "Utils/validChoice.hpp"
-#include "Utils/validFirstName.hpp"
-#include "Utils/validStudentID.hpp"
-#include "Utils/displayWelcome.hpp"
+#include "Utils/displayWelcome.hpp"     // contains validChoice, validFirstName, validStudentID
 #include "Utils/displayBooks.hpp"
 
 #include <iostream> // for print
@@ -27,7 +24,7 @@ Using I/O manipulation to display catalog. Using overloaded methods to search fo
 using namespace std;
 
 int main() {
-    displayWelcome();
+//    displayWelcome();
     displayBooks();
 
     
