@@ -1,6 +1,7 @@
 #include <iostream> // for print
 #include <string>   // for strings
 #include <iomanip>  // for display manip
+#include <vector>
 
 
 #include "globalVariables.hpp"
@@ -18,7 +19,7 @@ void displayBooks(){
 
     cout << setw(80) << setfill('-') << "" << endl;
     
-    for(int i = 0; i < size(numberID); i++){
+    for(int i = 0; i < numberID.size(); i++){
         cout << right << setw(5) << setfill('1') << numberID[i] << setfill(' ') << setw(10) << "" << left << setw(20) << author[i] << setw(20) << genre[i] << setw(20) << title[i] << endl;
     }
     

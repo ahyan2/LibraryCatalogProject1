@@ -27,20 +27,29 @@ using namespace std;
 
 
 void checkOut(){
-    cout << "Enter the 5-digit book ID:" << endl;
-    int arrIndex = -1;
-    while(true){
-        int bookID = validID(5);
-        if (bookID >= 11111 && bookID <= 11115){
-            arrIndex = (bookID % 10) - 1;
+    while (true){
+        cout << "Enter the 5-digit book ID:" << endl;
+        int arrIndex = -1;
+        while(true){
+            int bookID = validID(5);
+            if (bookID >= 11111 && bookID <= 11115){
+                arrIndex = (bookID % 10) - 1;
+                break;
+            } else {
+                cout << "Invalid, try again." << endl;
+            }
+        }
+        cout << "Is this the book you would like to checkout?" << endl;
+        cout << "*** " << title[arrIndex] << ", by " << author[arrIndex] << " ***" << endl;
+        char choice = validChoice();
+        if (choice == 'y'){
+            numberID.erase(numberID.begin() + arrIndex);     // removes value at arrIndex from vector
+            author.erase(author.begin() + arrIndex);
+            genre.erase(genre.begin() + arrIndex);
+            title.erase(title.begin() + arrIndex);
             break;
-        } else {
-            cout << "Invalid, try again." << endl;
         }
     }
-    cout << "Is this the book you would like to checkout?" << endl;
-    cout << right << setw(5) << setfill('1') << numberID[arrIndex] << setfill(' ') << setw(10) << "" << left << setw(20) << author[arrIndex] << setw(20) << genre[arrIndex] << setw(20) << title[arrIndex] << endl;
-    
 }
 
 
@@ -51,7 +60,11 @@ void userCatalogInteraction(){
     if (choice == 'y'){
         checkOut();
     }
-//    cout << endl << "Would you like to donate a book?" << endl;   TODO: ADD IMPLEMENTATION
+    cout << endl << "Would you like to donate/check-in a book?" << endl;
+    choice = validChoice();
+    if (choice == 'y'){
+        //
+    }
 }
 
 
@@ -59,6 +72,7 @@ int main() {
 //    displayWelcome();
     displayBooks();
     userCatalogInteraction();
+    displayBooks();
 
     
     return 0;
