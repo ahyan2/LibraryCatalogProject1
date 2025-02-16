@@ -15,6 +15,7 @@ Using I/O manipulation to display catalog. Using overloaded methods to search fo
 #include "Utils/validFirstName.hpp"
 #include "Utils/validStudentID.hpp"
 #include "Utils/displayWelcome.hpp"
+#include "Utils/displayBooks.hpp"
 
 #include <iostream> // for print
 #include <string>   // for strings
@@ -27,7 +28,7 @@ using namespace std;
 
 int main() {
     displayWelcome();
-    cout << "Complete!" << endl;
+    displayBooks();
 
     
     return 0;
