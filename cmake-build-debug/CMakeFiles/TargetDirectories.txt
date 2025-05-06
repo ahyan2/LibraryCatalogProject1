@@ -1,0 +1,3 @@
+/Users/ahyan/CLionProjects/LibraryCatalogProject1CLion/cmake-build-debug/CMakeFiles/MyProjectApp.dir
+/Users/ahyan/CLionProjects/LibraryCatalogProject1CLion/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ahyan/CLionProjects/LibraryCatalogProject1CLion/cmake-build-debug/CMakeFiles/rebuild_cache.dir

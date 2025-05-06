@@ -6,8 +6,8 @@
 #include <thread>   // for time delay
 
 
-#include "globalVariables.hpp"
-#include "validChoice.hpp"
+#include "../include/globalVariables.hpp"
+#include "../include/validChoice.hpp"
 
 using namespace std;
 

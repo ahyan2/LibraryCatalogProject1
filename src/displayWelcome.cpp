@@ -1,7 +1,7 @@
-#include "validChoice.hpp"
-#include "validFirstName.hpp"
-#include "validID.hpp"
-#include "globalVariables.hpp"  // for global variables: name and studentID
+#include "../include/validChoice.hpp"
+#include "../include/validFirstName.hpp"
+#include "../include/validID.hpp"
+#include "../include/globalVariables.hpp"  // for global variables: name and studentID
 
 #include <iostream> // for print
 #include <string>   // for strings

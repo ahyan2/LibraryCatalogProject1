@@ -1,0 +1,14 @@
+# ninja log v6
+3	997	1746571159032800428	CMakeFiles/MyProjectApp.dir/src/displayGoodbye.cpp.o	132b0d98246acc51
+2	1220	1746571159031721214	CMakeFiles/MyProjectApp.dir/src/awaitingCheckIn.cpp.o	d6bf77cafbceb6af
+3	1266	1746571159032307800	CMakeFiles/MyProjectApp.dir/src/checkOut.cpp.o	56037d73a9b41965
+2	1313	1746571159031189294	CMakeFiles/MyProjectApp.dir/main.cpp.o	736e037a724fcb53
+2	1500	1746571159032033632	CMakeFiles/MyProjectApp.dir/src/checkIn.cpp.o	c442ff8b520668c0
+3	1547	1746571159032547510	CMakeFiles/MyProjectApp.dir/src/displayBooks.cpp.o	4c7cbcb0d357f25d
+1313	1909	1746571160342611287	CMakeFiles/MyProjectApp.dir/src/validChoice.cpp.o	79b16ccde4491e29
+1221	1968	1746571160250571985	CMakeFiles/MyProjectApp.dir/src/globalVariables.cpp.o	e4db63872321f073
+1548	2052	1746571160577067985	CMakeFiles/MyProjectApp.dir/src/validID.cpp.o	812370b57b5b0e3c
+1024	2072	1746571160054145556	CMakeFiles/MyProjectApp.dir/src/displayWelcome.cpp.o	cf78f71063fa27f1
+1500	2076	1746571160529671909	CMakeFiles/MyProjectApp.dir/src/validFirstName.cpp.o	f8d62039b94f55a0
+1266	2120	1746571160295651422	CMakeFiles/MyProjectApp.dir/src/userCatalogInteraction.cpp.o	f2661d4148a84340
+2120	2220	1746571161149505419	MyProjectApp	b4dd399b57243a1

@@ -1,5 +1,5 @@
-#include "displayBooks.hpp"
-#include "globalVariables.hpp"
+#include "../include/displayBooks.hpp"
+#include "../include/globalVariables.hpp"
 
 #include <iostream> // for print
 

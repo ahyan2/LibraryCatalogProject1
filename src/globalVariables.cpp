@@ -1,4 +1,4 @@
-#include "globalVariables.hpp"
+#include "../include/globalVariables.hpp"
 #include <string>
 
 using namespace std;

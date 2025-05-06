@@ -1,8 +1,8 @@
 #include <iostream> // for print
 
-#include "validChoice.hpp"
-#include "validID.hpp"
-#include "globalVariables.hpp"
+#include "../include/validChoice.hpp"
+#include "../include/validID.hpp"
+#include "../include/globalVariables.hpp"
 
 using namespace std;
 

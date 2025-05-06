@@ -1,9 +1,9 @@
 #include <iostream> // for print
 #include <chrono>   // for time delay
 #include <thread>   // for time delay
-#include "globalVariables.hpp"
-#include "checkIn.hpp"
-#include "validChoice.hpp"
+#include "../include/globalVariables.hpp"
+#include "../include/checkIn.hpp"
+#include "../include/validChoice.hpp"
 
 using namespace std;
 

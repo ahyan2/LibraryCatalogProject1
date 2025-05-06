@@ -1,8 +1,8 @@
-#include "Utils/displayWelcome.hpp"     // contains validChoice, validFirstName, validStudentID
-#include "Utils/displayBooks.hpp"
-#include "globalVariables.hpp"
-#include "Utils/userCatalogInteraction.hpp"
-#include "Utils/displayGoodbye.hpp"
+#include "include/displayWelcome.hpp"     // contains validChoice, validFirstName, validStudentID
+#include "include/displayBooks.hpp"
+#include "include/globalVariables.hpp"
+#include "include/userCatalogInteraction.hpp"
+#include "include/displayGoodbye.hpp"
 
 #include <iostream> // for print
 #include <string>   // for strings

@@ -1,6 +1,6 @@
 #include <iostream> // for print
 #include <iomanip>
-#include "globalVariables.hpp"
+#include "../include/globalVariables.hpp"
 
 using namespace std;
 
