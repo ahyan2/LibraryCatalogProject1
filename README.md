@@ -1,5 +1,10 @@
 [UPDATE: ADDED TESTING FUNCTIONALITY]
 
+## Library Catalog Project 
+
+[![Cross-Platform CMake Build and Test](https://github.com/<your‑user>/<your‑repo>/actions/workflows/ci.yml/badge.svg)](https://github.com/<your‑user>/<your‑repo>/actions/workflows/ci.yml)
+
+
 
 High-level overview:
 - A C++ Program which acts as an interactable library catalog.
