@@ -2,7 +2,7 @@
 
 ## Library Catalog Project 
 
-[![Cross-Platform CMake Build and Test](https://github.com/<your‑user>/<your‑repo>/actions/workflows/ci.yml/badge.svg)](https://github.com/<your‑user>/<your‑repo>/actions/workflows/ci.yml)
+![Build Status](https://github.com/ahyan2/LibraryCatalogProject1/actions/workflows/cmake.yml/badge.svg?branch=project1-tests)
 
 
 
