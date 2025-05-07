@@ -8,27 +8,27 @@ on:
 
 jobs:
   build:
-
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
 
-    runs-on: ${{ matrix.os }}
-
     steps:
-      - name: Checkout repository
+      - name: Checkout code (with submodules)
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
-      - name: Install CMake
+      - name: Set up CMake
         uses: lukka/get-cmake@latest
 
       - name: Configure project with CMake
-        run: cmake -B build -DCMAKE_CXX_STANDARD=20
+        run: cmake -S . -B build -DCMAKE_CXX_STANDARD=20
 
-      - name: Build with CMake
+      - name: Build the project
         run: cmake --build build
 
-      - name: Run tests (if available)
+      - name: Run tests (if defined)
         run: |
           cd build
-          ctest || echo "No tests found"
+          ctest --output-on-failure || echo "No tests found"
