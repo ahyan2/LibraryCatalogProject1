@@ -1,0 +1,5 @@
+if(EXISTS "/Users/ahyan/CLionProjects/LibraryCatalogProject1CLion/cmake-build-debug/MyProjectTests[1]_tests.cmake")
+  include("/Users/ahyan/CLionProjects/LibraryCatalogProject1CLion/cmake-build-debug/MyProjectTests[1]_tests.cmake")
+else()
+  add_test(MyProjectTests_NOT_BUILT MyProjectTests_NOT_BUILT)
+endif()

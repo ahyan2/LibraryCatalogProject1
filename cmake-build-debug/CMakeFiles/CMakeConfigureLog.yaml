@@ -449,3 +449,39 @@ events:
       LTO support using: LLVM version 15.0.0 (static support for 29, runtime is 29)
       TAPI support using: Apple TAPI version 15.0.0 (tapi-1500.3.2.2)
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "extern/googletest/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "extern/googletest/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/Users/ahyan/CLionProjects/LibraryCatalogProject1CLion/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TE9ke8"
+      binary: "/Users/ahyan/CLionProjects/LibraryCatalogProject1CLion/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TE9ke8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/ahyan/CLionProjects/LibraryCatalogProject1CLion/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TE9ke8'
+        
+        Run Build Command(s): /Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -v cmTC_6f8fc
+        [1/2] /Library/Developer/CommandLineTools/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -MD -MT CMakeFiles/cmTC_6f8fc.dir/src.c.o -MF CMakeFiles/cmTC_6f8fc.dir/src.c.o.d -o CMakeFiles/cmTC_6f8fc.dir/src.c.o -c /Users/ahyan/CLionProjects/LibraryCatalogProject1CLion/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TE9ke8/src.c
+        [2/2] : && /Library/Developer/CommandLineTools/usr/bin/cc -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_6f8fc.dir/src.c.o -o cmTC_6f8fc   && :
+        
+      exitCode: 0
+...
