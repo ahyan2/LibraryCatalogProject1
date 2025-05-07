@@ -1,3 +1,6 @@
+[UPDATE: ADDED TESTING FUNCTIONALITY]
+
+
 High-level overview:
 - A C++ Program which acts as an interactable library catalog.
 
