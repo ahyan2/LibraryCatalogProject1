@@ -2,7 +2,7 @@
 
 ## Library Catalog Project 
 
-![Build Status](https://github.com/ahyan2/LibraryCatalogProject1/actions/workflows/cmake.yml/badge.svg?branch=project1-tests)
+![Build Status](https://github.com/ahyan2/LibraryCatalogProject1/actions/workflows/cross-platform-ci.yml/badge.svg?branch=project1-tests)
 
 
 
