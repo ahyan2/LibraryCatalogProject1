@@ -11,7 +11,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
       - name: Checkout code (with submodules)
@@ -22,7 +22,7 @@ jobs:
       - name: Set up CMake
         uses: lukka/get-cmake@latest
 
-      - name: Configure project with CMake
+      - name: Configure CMake
         run: cmake -S . -B build -DCMAKE_CXX_STANDARD=20
 
       - name: Build the project
