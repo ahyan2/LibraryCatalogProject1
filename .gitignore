@@ -1,46 +1,34 @@
-# Prerequisites
-*.d
+# CMake build folders
+build/
+cmake-build-*/
 
-# Compiled Object files
-*.slo
-*.lo
+# Ignore GoogleTest build cache if it exists
+extern/googletest/build/
+
+# CLion/IDEA
+.idea/
+
+# macOS
+.DS_Store
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserdata/
+DerivedData/
+
+# Object and binary files
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
+*.exe
+*.out
+*.app
+*.a
+*.lib
 *.so
 *.dylib
 *.dll
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Ignore Xcode project files and build artifacts
-*.xcodeproj/
-*.xcworkspace/
-*.xcuserdata/
-*.xcassets/
-*.xcconfig
-DerivedData/
-build/
-.idea/
-Pods/
-
-# macOS system files
-.DS_Store
+# Precompiled headers
+*.gch
+*.pch
