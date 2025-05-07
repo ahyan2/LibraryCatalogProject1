@@ -13,7 +13,7 @@
 
 using namespace std;
 
-bool userCatalogInteraction();
+void userCatalogInteraction();
 
 # endif
 

@@ -7,7 +7,7 @@
 
 using namespace std;
 
-bool displayGoodbye();
+void displayGoodbye();
 
 # endif
 

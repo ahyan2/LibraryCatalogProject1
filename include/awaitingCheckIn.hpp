@@ -10,7 +10,7 @@
 
 using namespace std;
 
-bool awaitingCheckIn();
+void awaitingCheckIn();
 
 # endif
 
